@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glosario HTML y CSS</title>
+    <style>
+        * {
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .title_glosary {
+            text-align: center;
+            color: #333;
+        }
+
+        details {
+            background: #e3f2fd;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        details summary {
+            font-weight: bold;
+            color: #0277bd;
+        }
+
+        code {
+            background: #f0f8ff;
+            padding: 2px 5px;
+            border-radius: 5px;
+        }
+
+        pre {
+            background: #f0f8ff;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .resaltado {
+            background-color: #ffeb3b;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title_glosary">Glosario HTML y CSS</h1>
+
+        <h2>Etiquetas HTML</h2>
+        <p>Las etiquetas HTML son los bloques de construcción de una página web.</p>
+
+        <details>
+            <summary><code>&lt;a&gt;</code></summary>
+            <p><b>Descripción:</b> Crea hipervínculos a otras páginas, archivos o secciones dentro del documento.</p>
+            <p><b>Atributos clave:</b> href, target, download.</p>
+            <h4>Ejemplo:</h4>
+            <pre><code>
+                &lt;a href="https:google.com" target="_blank"&gt;Hola Mundo&lt;/a&gt;
+
+                <a href="https://google.com" target="_blank">Ir a Google</a>
+            </code></pre>
+        </details>
+
+        <details>
+            <summary><code>&lt;body&gt;</code></summary>
+            <p><b>Descripción:</b> Contiene todo el contenido visible de la página (textos, imágenes, etc.).</p>
+            <h4>Ejemplo:</h4>
+            <pre><code>
+                &lt;body&gt;
+                    &lt;h1&gt;Hola Mundo&lt;/h1&gt;
+                &lt;/body&gt;
+            </code></pre>
+        </details>
+
+        <details>
+            <summary><code>&lt;br&gt;</code></summary>
+            <p><b>Descripción:</b> Inserta un salto de línea (sin cerrar como etiqueta contenedora).</p>
+            <h4>Ejemplo:</h4>
+            <pre><code>
+                Primera línea &lt;br&gt;Segunda línea.
+
+                Primera línea<br>               Segunda línea.
+            </code></pre>
+        </details>
+
+        <details>
+            <summary><code>&lt;button&gt;</code></summary>
+            <p><b>Descripción:</b> Crea un botón clickeable (usado en formularios o acciones JS).</p>
+            <p><b>Atributos clave: </b>type, onclick.</p>
+            <h4>Ejemplo:</h4>
+            <pre><code>
+                &lt;button type="button" onclick="alert('Hola'")"&gt;Saludar&lt;/button&gt;
+
+                <button type="button" onclick="alert('Hola')">Saludar</button>
+            </code></pre>
+        </details>
+
+        <details>
+            <summary><code>&lt;div&gt;</code></summary>
+            <p><b>Descripción: </b>Contenedor genérico para agrupar elementos y aplicar estilos CSS.</p>
+            <h4>Ejemplo:</h4>
+            <pre><code>
+                &lt;div class="container"&gt;
+                    Contenido aquí
+                &lt;/div&gt;
+            </code></pre>
+        </details>
+
+        <details>
+            <summary><code>&lt;form&gt;</code></summary>
+            <p><b>Descripción: </b>Define un formulario para enviar datos al servidor.</p>
+            <p><b>Atributos clave:</b> action, method, enctype.</p>
+            <h4>Ejemplo:</h4>
+            <pre><code>
+                &lt;form action="/submit" method="POST"&gt;
+                    &lt;input type="text" name="nombre" placeholder="Nombre"&gt;
+                    &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+                &lt;/form&gt;
+            </code></pre>
+        </details>
+
+        <details>
+            <summary><code>&lt;h1 - h6&gt;</code></summary>
+            <p><b>Descripción:</b> Encabezados de diferentes niveles.</p>
+            <h4>Ejemplo:</h4>
+            <pre><code>
+                &lt;h1&gt;Titulo principal&lt;/h1&gt;
+                &lt;h1&gt;Subtítulo&lt;/h1&gt;
+
+                <h1>Título principal</h1>
+                <h2>Subtítulo</h2>
+            </code></pre>
+        </details>
+        
+        <details>
+            <summary><code>&lt;head&gt;</code></summary>
+            <p><b>Descripción:</b> Contiene metadatos, enlaces a CSS/JS y el título de la página (no visible).</p>
+            <h4>Ejemplo:</h4>
+            <pre><code>
+                &lt;head&gt;
+                    &lt;title&gt;Mi página&lt;/title&gt;
+                    &lt;link rel="stylesheet" href="styles.css"&gt;
+                    &lt;meta charset="UTF-8"&gt;
+                &lt;/head&gt;
+            </code></pre>
+        </details>
+
+        <details>
+            <summary><code>&lt;html&gt;</code></summary>
+            <p><b>Descripción:</b> Raíz del documento HTML. Todos los elementos deben ir dentro de esta etiqueta.</p>
+            <h4>Ejemplo:</h4>
+            <pre><code>
+                &lt;html&gt;
+                    &lt;head&gt;...&lt;/head&gt;
+                    &lt;body&gt;...&lt;/body&gt;
+                &lt;/html&gt;
+            </code></pre>
+        </details>
+
+        <details>
+            <summary><code>&lt;img&gt;</code></summary>
+            <p><b>Descripción:</b> Muestra una imagen. ¡Siempre usa el atributo alt!</p>
+            <p><b>Atributos clave:</b> src, alt, width, height.</p>
+            <h4>Ejemplo:</h4>
+            <pre><code>
+                &lt;src="logo.png" alt="Logo de la empresa"&gt;
+            </code></pre>
+        </details>
+
+        <details>
+            <summary><code>&lt;input&gt;</code></summary>
+            <p><b>Descripción:</b> Campo de entrada para datos de usuario (texto, contraseña, checkbox, etc.).</p>
+            <p><b>Atributos clave: </b>type, name, placeholder.</p>
+            <h4>Ejemplo:</h4>
+            <pre><code>
+                &lt;type="email" placeholder="Ingresa tu correo"&gt;
+            </code></pre>
+        </details>
+
+        <details>
+            <summary><code>&lt;li&gt;</code></summary>
+            <p><b>Descripción: </b>Representa un ítem dentro de una lista</p>
+            <h4>Ejemplo:</h4>
+            <pre><code>
+                &lt;ul&gt;
+                    &lt;li&gt;Manzanas&lt;/li&gt;
+                    &lt;li&gt;Naranjas&lt;/li&gt;
+                &lt;/ul&gt;
+
+                <ul>
+                    <li>Manzanas</li>
+                    <li>Naranjas</li>
+                </ul>
+            </code></pre>
+        </details>
+
+        <details>
+            <summary><code>&lt;link&gt;</code></summary>
+            <p><b>Descripción: </b>Enlaza recursos externos como hojas de estilo CSS o favicons.</p>
+            <p><b>Atributos clave: </b>rel, href.</p>
+            <h4>Ejemplo:</h4>
+            <pre><code>
+                &lt;link rel="stylesheet" href="estilos.css"&gt;
+            </code></pre>
+        </details>
+
+        <details>
+            <summary><code>&lt;p&gt;</code></summary>
+            <p><b>Descripción:</b> Define un párrafo de texto.</p>
+            <h4>Ejemplo:</h4>
+            <pre><code>
+                &lt;p&gt;Este es un párrafo de ejemplo.&lt;/p&gt;
+            </code></pre>
+        </details>
+
+        <details>
+            <summary><code>&lt;script&gt;</code></summary>
+            <p><b>Descripción:</b> Inserta código JavaScript (interno o externo).</p>
+            <p><b>Atributos clave: </b>src, async, defer.</p>
+            <h4>Ejemplo:</h4>
+            <pre><code>
+                &lt;script src="app.js"&gt;&lt;/script&gt;
+            </code></pre>
+        </details>
+
+        <details>
+            <summary><code>&lt;span&gt;</code></summary>
+            <p><b>Descripción: </b>Contenedor en línea para aplicar estilos o JS a texto específico.</p>
+            <h4>Ejemplo:</h4>
+            <pre><code>
+                &lt;p&gt;&lt;span class="resaltado"&gt;resaltado&lt;/span&gt;&lt;/p&gt;
+
+                <p>Texto <span class="resaltado">resaltado</span></p>
+            </code></pre>
+        </details>
+
+
+        <details>
+            <summary><code>&lt;style&gt;</code></summary>
+            <p><b>Descripción: </b>Define estilos CSS internos.</p>
+            <h4>Ejemplo:</h4>
+            <pre><code>
+                &lt;style&gt;
+                    body { font-family: Arial; }
+                &lt;/style&gt;
+            </code></pre>
+        </details>
+
+        
+        <details>
+            <summary><code>&lt;table&gt;</code></summary>
+            <p><b>Descripción: </b>Crea una tabla con filas (&lt;tr&gt;) y celdas (&lt;td&gt; o &lt;th&gt;).</p>
+            <h4>Ejemplo:</h4>
+            <pre><code>
+                &lt;table&gt;
+                    &lt;tr&gt;
+                        &lt;Nombre&gt;
+                        &lt;Edad&gt;
+                    &lt;/tr&gt;
+                &lt;/table&gt;
+            </code></pre>
+        </details>
+
+        
+        <details>
+            <summary><code>&lt;title&gt;</code></summary>
+            <p><b>Descripción: </b>Define el título de la pestaña del navegador (importante para SEO).</p>
+            <h4>Ejemplo:</h4>
+            <pre><code>
+                &lt;title&gt;Mi Sitio Web&lt;/title&gt;
+            </code></pre>
+        </details>
+
+        
+        <details>
+            <summary><code>&lt;ul&gt;</code></summary>
+            <p><b>Descripción: </b>Lista desordenada (con viñetas).</p>
+            <h4>Ejemplo:</h4>
+            <pre><code>
+                &lt;ul&gt;
+                    &lt;Item 1&gt;
+                    &lt;Item 2&gt;
+                &lt;/ul&gt;
+            </code></pre>
+        </details>
+
+        <h2>Propiedades CSS</h2>
+        <p>Las propiedades CSS son las características que se pueden aplicar a los elementos HTML para definir su apariencia.</p>
+
+        <h3>Propiedades de texto</h3>
+        <p>Estas propiedades afectan la apariencia del texto en los elementos HTML.</p>
+        <details>
+            <summary><code>color</code></summary>
+            <p><b>Descripción: </b> Color del texto.</p>
+            <h4>Ejemplo:</h4>
+            <pre><code>
+                p { color: #333; }
+            </code></pre>
+        </details>
+
+        <details>
+            <summary><code>font-family</code></summary>
+            <p><b>Descripción: </b> Tipo de fuente.</p>
+            <h4>Ejemplo:</h4>
+            <pre><code>
+                body { font-family: 'Arial', sans-serif; }
+            </code></pre>
+        </details>
+
+        <details>
+            <summary><code>font-size</code></summary>
+            <p><b>Descripción: </b> Tamaño del texto.</p>
+            <h4>Ejemplo:</h4>
+            <pre><code>
+                h1 { font-size: 2rem; }
+            </code></pre>
+        </details>
+
+        <details>
+            <summary><code>font-weight</code></summary>
+            <p><b>Descripción: </b> Grosor (normal, bold).</p>
+            <h4>Ejemplo:</h4>
+            <pre><code>
+                strong { font-weight: bold; }
+            </code></pre>
+        </details>
+
+        <details>
+            <summary><code>text-align</code></summary>
+            <p><b>Descripción: </b> Alineación (left, center, right).</p>
+            <h4>Ejemplo:</h4>
+            <pre><code>
+                div { text-align: center; }
+            </code></pre>
+        </details>
+
+        <h3>Propiedades de caja</h3>
+        <p>Estas propiedades afectan el modelo de caja de los elementos HTML.</p>
+        <details>
+            <summary><code>width / height</code></summary>
+            <p><b>Descripción: </b> Ancho y alto.</p>
+            <h4>Ejemplo:</h4>
+            <pre><code>
+                .box { width: 100px; height: 100px; }
+            </code></pre>
+        </details>
+
+        <details>
+            <summary><code>margin</code></summary>
+            <p><b>Descripción: </b> Espacio exterior.</p>
+            <h4>Ejemplo:</h4>
+            <pre><code>
+                div { margin: 10px; } /* Arriba/abajo/derecha/izquierda */
+            </code></pre>
+        </details>
+
+        <details>
+            <summary><code>padding</code></summary>
+            <p><b>Descripción: </b> Espacio interior.</p>
+            <h4>Ejemplo:</h4>
+            <pre><code>
+                button { padding: 8px 16px; }
+            </code></pre>
+        </details>
+
+        <details>
+            <summary><code>border</code></summary>
+            <p><b>Descripción: </b> Borde (ancho, estilo, color).</p>
+            <h4>Ejemplo:</h4>
+            <pre><code>
+                img { border: 1px solid #ddd; }
+            </code></pre>
+        </details>
+
+        <details>
+            <summary><code>box-sizing</code></summary>
+            <p><b>Descripción: </b> Controla cómo se calcula el tamaño (content-box, border-box).</p>
+            <h4>Ejemplo:</h4>
+            <pre><code>
+                * { box-sizing: border-box; } /* ¡Recomendado! */
+            </code></pre>
+        </details>
+
+        <h3>Propiedades de fondo</h3>
+        <p>Estas propiedades afectan el fondo de los elementos HTML.</p>
+        <details>
+            <summary><code>background-color</code></summary>
+            <p><b>Descripción: </b> Color de fondo.</p>
+            <h4>Ejemplo:</h4>
+            <pre><code>
+                body { background-color: #f0f0f0; }
+            </code></pre>
+        </details>
+
+        <details>
+            <summary><code>background-image</code></summary>
+            <p><b>Descripción: </b> Imagen de fondo.</p>
+            <h4>Ejemplo:</h4>
+            <pre><code>
+                header { background-image: url("fondo.jpg"); }
+            </code></pre>
+        </details>
+
+        <h3>Propiedades de diseño (Layout)</h3>
+        <p>Estas propiedades afectan la disposición de los elementos en la página.</p>
+        <details>
+            <summary><code>display</code></summary>
+            <p><b>Descripción: </b> Tipo de visualización (block, inline, flex, grid).</p>
+            <h4>Ejemplo:</h4>
+            <pre><code>
+                .container { display: flex; }
+            </code></pre>
+        </details>
+
+        <details>
+            <summary><code>position</code></summary>
+            <p><b>Descripción: </b> Posicionamiento (relative, absolute, fixed).</p>
+            <h4>Ejemplo:</h4>
+            <pre><code>
+                .menu { position: fixed; top: 0; }
+            </code></pre>
+        </details>
+
+        <details>
+            <summary><code>flexbox</code></summary>
+            <p><b>Descripción: </b> Propiedades para crear diseños flexibles.</p>
+            <h4>Ejemplo:</h4>
+            <pre><code>
+                .container {
+                    display: flex;
+                    justify-content: center; /* Alineación horizontal */
+                    align-items: center;     /* Alineación vertical */
+                  }
+            </code></pre>
+        </details>
+
+        <details>
+            <summary><code>grid</code></summary>
+            <p><b>Descripción: </b> Propiedades para crear diseños de cuadrícula.</p>
+            <h4>Ejemplo:</h4>
+            <pre><code>
+                .grid-container {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+                }
+            </code></pre>
+        </details>
+
+        <h3>Propiedades de efectos visuales</h3>
+        <p>Estas propiedades afectan la apariencia visual de los elementos HTML.</p>
+        <details>
+            <summary><code>box-shadow</code></summary>
+            <p><b>Descripción: </b> Sombra alrededor de un elemento.</p>
+            <h4>Ejemplo:</h4>
+            <pre><code>
+                .card { box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); }
+            </code></pre>
+        </details>
+
+        <details>
+            <summary><code>opacity</code></summary>
+            <p><b>Descripción: </b> Opacidad (0 a 1).</p>
+            <h4>Ejemplo:</h4>
+            <pre><code>
+                .overlay { opacity: 0.5; }
+            </code></pre>
+        </details>
+
+        <details>
+            <summary><code>transition</code></summary>
+            <p><b>Descripción: </b> Transiciones suaves entre estados.</p>
+            <h4>Ejemplo:</h4>
+            <pre><code>
+                button { transition: background-color 0.3s ease; }
+            </code></pre>
+        </details>
+
+        <h3>Propiedades de diseño responsivo</h3>
+        <p>Estas propiedades permiten que el diseño se adapte a diferentes tamaños de pantalla.</p>
+        <details>
+            <summary><code>media queries</code></summary>
+            <p><b>Descripción: </b> Aplicar estilos según el tamaño de la pantalla.</p>
+            <h4>Ejemplo:</h4>
+            <pre><code>
+                @media (max-width: 600px) {
+                    body { font-size: 14px; }
+                }
+            </code></pre>
+        </details>
+
+        <h3>Propiedades avanzadas</h3>
+        <details>
+            <summary><code>transform</code></summary>
+            <p><b>Descripción: </b> Rotar, escalar o mover elementos.</p>
+            <h4>Ejemplo:</h4>
+            <pre><code>
+                .icon:hover { transform: rotate(45deg); }
+            </code></pre>
+        </details>
+
+        <details>
+            <summary><code>z-index</code></summary>
+            <p><b>Descripción: </b> Control de capas (superposición).</p>
+            <h4>Ejemplo:</h4>
+            <pre><code>
+                .modal { z-index: 1000; }
+            </code></pre>
+        </details>
+
+        <details>
+            <summary><code>cursor</code></summary>
+            <p><b>Descripción: </b> Cambia el cursor (pointer, not-allowed).</p>
+            <h4>Ejemplo:</h4>
+            <pre><code>
+                button { cursor: pointer; }
+            </code></pre>
+        </details>
+
+    </div>
+</body>
+</html>
