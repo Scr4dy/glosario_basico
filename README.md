@@ -9,7 +9,6 @@ El glosario incluye explicaciones breves y ejemplos de uso de etiquetas y propie
 - Ideal para estudiantes o personas que están empezando a programar páginas web.
 ## 📂 Estructura del Proyecto
 - `index.html`: Archivo principal con el glosario de etiquetas HTML.
-- `styles.css`: Hoja de estilos para mejorar la presentación del glosario.
 - `README.md`: Este archivo, con información sobre el proyecto.
 ## 📎Cómo usar
 1. Descarga o clona el repositorio:
